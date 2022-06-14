@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header>
+    <button class="search" id="searchButton" type="submit" value="submit">Search</button>
+   <form id="search">
+     <input type="search" placeholder="Enter Location" id="cityInput" />
+    </form>
+    <header>
+    <section class="main">
+    <h3 class="date" id="dateTime">08:00 Tuesday 14th June 2022</h3>
+    <h1 id="placeName">Liverpool</h1>
+    <h2 id="currentTemp">12˚C</h2>
+    <img src="" id="currentWeatherIcon">
+    <h2 id="weatherDescription">Rain</h2>
+    <h4>Wind: 5mph</h4>
+    <h4>Humidity: 47%</h4>
+    </section>
+    <section class="forecast">
+    <h3>Forecast</h3>
+      <div class="forecast day">Wednesday</div>
+<div class="forecast">Thursday</div>
+    <div class="forecast">Friday</div>
+    <div class="forecast">Saturday</div>
+    <div class="forecast">Sunday</div>
+    <div class="forecast">Monday</div>
+    </div>
+    </section>
+  <footer>
+  <p>By Carla Slattery</p>
+  <p>View code on <a href="">Github</a>
+  </footer>
+
+
+
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
