@@ -43,3 +43,25 @@ let months = [
 let month = months[now.getMonth()];
 
 todaysDate.innerHTML = `${day}, ${date} ${month} ${year} at ${hours}:${minutes}`;
+
+// =================== WEATHER SEARCH ===========================================//
+
+function displayCurrentTemp(response) {
+  console.log(response.data);
+  let city = document.querySelector("#placeName");
+  let currentTemp = document.querySelector("#currentTemp");
+  let weatherDescription = document.querySelector("#weatherDescription");
+  let humidity = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#windSpeed");
+  city.innerHTML = response.data.name;
+  currentTemp.innerHTML = Math.round(response.data.main.temp);
+  weatherDescription.innerHTML = response.data.weather[0].description;
+  humidity.innerHTML = response.data.main.humidity;
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
+}
+
+let apiKey = "51a8ffee2e435fe855f1dad6b24620d1";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Liverpool&appid=${apiKey}&units=metric`;
+console.log(apiUrl);
+
+axios.get(apiUrl).then(displayCurrentTemp);
