@@ -1,2 +1,2 @@
 # refactoredWeatherApp
-improved design and functionality
+updated design using vanilla css
